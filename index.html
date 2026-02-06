@@ -4,7 +4,263 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Al-Mustapha | Wedding Scent Experiences</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* RESET */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f6f4f1;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+      ),
+      url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9");
+      background-size: cover;
+      background-position: center;
+      color: #f6f4f1;
+      min-height: 95vh;
+      padding: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-weight: 300;
+      letter-spacing: 0.08em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #f6f4f1;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .hero-text {
+      max-width: 520px;
+      margin-top: 7rem;
+    }
+
+    .hero-text h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background: rgba(255,255,255,0.85);
+      color: #2c2c2c;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .section.soft {
+      background: #efedea;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .card {
+      background: #faf9f7;
+      padding: 2.5rem;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card h4 {
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* FORM */
+    form {
+      max-width: 520px;
+      display: grid;
+      gap: 1rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.9rem;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: #faf9f7;
+    }
+
+    button {
+      padding: 1rem;
+      background: #2c2c2c;
+      color: #f6f4f1;
+      border: none;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f1f1f;
+      color: #f6f4f1;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+
+    /* REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 768px) {
+
+      /* HERO */
+      .hero {
+        padding: 1.8rem;
+        min-height: 100vh;
+        background-attachment: scroll;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      nav ul {
+        gap: 1.2rem;
+      }
+
+      .hero-text {
+        margin-top: 4rem;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .hero-text h2 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 0.9rem 2.2rem;
+      }
+
+      /* SECTIONS */
+      .section {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .section h3 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .section p {
+        text-align: center;
+      }
+
+      /* CARDS */
+      .cards {
+        gap: 1.8rem;
+      }
+
+      .card {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      /* GALLERY */
+      .gallery img {
+        height: 220px;
+      }
+
+      /* FORM */
+      form {
+        width: 100%;
+      }
+
+      input,
+      textarea {
+        font-size: 0.95rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -114,6 +370,23 @@
     <p>© 2026 Al-Mustapha Wedding Scent Experiences</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    // Reveal animation on scroll
+    const reveals = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (elementTop < windowHeight - revealPoint) {
+          reveals[i].classList.add("visible");
+        } else {
+          reveals[i].classList.remove("visible");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
