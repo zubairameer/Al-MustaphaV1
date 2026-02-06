@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al-Mustapha | Wedding Scent Experiences</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <nav>
+      <h1>Al-Mustapha</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Experiences</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Book</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-text reveal">
+      <h2>Scent for Meaningful Moments</h2>
+      <p>
+        Wedding perfume bars and intimate fragrance experiences
+        designed to be remembered long after the day ends.
+      </p>
+      <a href="#booking" class="btn">Book an Experience</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <h3>About Al-Mustapha</h3>
+    <p>
+      Al-Mustapha curates wedding fragrance experiences that feel personal,
+      intentional, and refined. Scent becomes part of the ceremony — subtle,
+      emotional, and unforgettable.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section soft reveal">
+    <h3>Wedding Experiences</h3>
+
+    <div class="cards">
+      <div class="card reveal">
+        <h4>Wedding Perfume Bar</h4>
+        <p>
+          An elegant perfume station for your guests to discover and take home
+          a scent that forever reminds them of your day.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <h4>Bridal & Groom Scents</h4>
+        <p>
+          A curated fragrance for the couple — intimate, timeless,
+          and chosen to match your union.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <h4>Guest Keepsakes</h4>
+        <p>
+          Minimal 5ml perfume gifts for guests — refined, thoughtful,
+          and beautifully presented.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section reveal">
+    <h3>Scent Gallery</h3>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa" alt="Perfume bottle on silk">
+      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="Luxury perfume bottle">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693" alt="Perfume flat lay">
+      <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Elegant fragrance scene">
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="section soft reveal">
+    <h3>Book a Wedding Experience</h3>
+    <p class="booking-sub">
+      Tell us about your wedding and we’ll create something personal.
+    </p>
+
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+    >
+      <input type="hidden" name="access_key" value="ddb8e87e-3132-41b7-a78f-9ed8910b37be" />
+      <input type="hidden" name="subject" value="New Wedding Booking Request" />
+      <input type="hidden" name="redirect" value="thank-you.html" />
+
+      <input type="checkbox" name="botcheck" style="display:none">
+
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="event_type" placeholder="Wedding Type" required />
+      <input type="date" name="event_date" required />
+      <textarea name="message" placeholder="Tell us about your wedding"></textarea>
+
+      <button type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Al-Mustapha Wedding Scent Experiences</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
